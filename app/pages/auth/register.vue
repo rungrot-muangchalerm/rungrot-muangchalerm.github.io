@@ -1,0 +1,119 @@
+<script setup>
+useHead({ title: "สมัครสมาชิก | ครัวบ้านดี" })
+</script>
+
+<template>
+  <div>
+
+    <main class="container py-5">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-12 col-lg-5">
+          <div class="card shadow-sm h-100">
+            <div class="card-body p-4 p-lg-5">
+              <div class="mb-4">
+                <div class="display-6 text-primary mb-3">
+                  <i class="fa-solid fa-user-plus"></i>
+                </div>
+                <h1 class="h3 mb-2">สมัครสมาชิก</h1>
+                <p class="text-body-secondary mb-0">สร้างบัญชีลูกค้าเพื่อสั่งอาหาร ดูประวัติ และกลับมาสั่งเมนูโปรดได้สะดวกขึ้น</p>
+              </div>
+              <form action="/auth/login" method="get">
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label" for="fullName">ชื่อ-นามสกุล</label>
+                    <input class="form-control form-control-lg" id="fullName" name="fullName" value="มะลิ ใจดี" autocomplete="name">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="phone">เบอร์โทร</label>
+                    <input class="form-control form-control-lg" id="phone" name="phone" value="081-234-5678" autocomplete="tel">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="email">อีเมล</label>
+                    <input class="form-control form-control-lg" type="email" id="email" name="email" value="mali@example.com" autocomplete="email">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="registerPassword">รหัสผ่าน</label>
+                    <div class="input-group input-group-lg">
+                      <input class="form-control" type="password" id="registerPassword" name="password" value="password" autocomplete="new-password">
+                      <button class="btn btn-outline-secondary" type="button" aria-label="แสดงรหัสผ่าน" title="แสดงรหัสผ่าน">
+                        <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                        <span class="visually-hidden">แสดงรหัสผ่าน</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="confirmPassword">ยืนยันรหัสผ่าน</label>
+                    <div class="input-group input-group-lg">
+                      <input class="form-control" type="password" id="confirmPassword" name="confirmPassword" value="password" autocomplete="new-password">
+                      <button class="btn btn-outline-secondary" type="button" aria-label="แสดงรหัสผ่าน" title="แสดงรหัสผ่าน">
+                        <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                        <span class="visually-hidden">แสดงรหัสผ่าน</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="address">ที่อยู่สำหรับเดลิเวอรี</label>
+                    <textarea class="form-control" id="address" name="address" rows="3" placeholder="กรอกที่อยู่ไว้ล่วงหน้าเพื่อสั่งเดลิเวอรีครั้งถัดไป"> 99 ถนนสุขุมวิท กรุงเทพฯ</textarea>
+                  </div>
+                </div>
+                <div class="form-check mt-4">
+                  <input class="form-check-input" type="checkbox" id="acceptTerms" name="acceptTerms" checked>
+                  <label class="form-check-label" for="acceptTerms">ยอมรับเงื่อนไขการใช้งานและนโยบายความเป็นส่วนตัวของร้าน</label>
+                </div>
+                <div class="form-check mt-2 mb-4">
+                  <input class="form-check-input" type="checkbox" id="receiveNews" name="receiveNews" checked>
+                  <label class="form-check-label" for="receiveNews">รับข่าวสารเมนูใหม่และโปรโมชันจากครัวบ้านดี</label>
+                </div>
+                <button class="btn btn-primary btn-lg w-100" type="submit">
+                  <i class="fa-solid fa-user-check me-1"></i>สมัครสมาชิก
+                </button>
+                <div class="text-center mt-4">
+                  <span class="text-body-secondary">มีบัญชีอยู่แล้ว?</span>
+                  <a class="fw-semibold" href="/auth/login">เข้าสู่บัญชี</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-7">
+          <div class="card h-100 shadow-sm overflow-hidden">
+            <div class="ratio ratio-16x9">
+              <img class="w-100 h-100 object-fit-cover" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80" alt="โต๊ะอาหารในครัวบ้านดีพร้อมอาหารหลายจาน">
+            </div>
+            <div class="card-body p-4 p-lg-5">
+              <span class="badge text-bg-success mb-3">
+                <i class="fa-solid fa-gift me-1"></i>สมาชิกครัวบ้านดี
+              </span>
+              <h2 class="display-6 fw-semibold mb-3">สั่งมื้อต่อไปให้ง่ายกว่าเดิม</h2>
+              <p class="text-body-secondary mb-4">บัญชีสมาชิกช่วยให้ลูกค้าดูประวัติคำสั่งซื้อ เก็บข้อมูลติดต่อ และกลับมาสั่งเมนูเดิมได้รวดเร็วขึ้น</p>
+              <div class="row g-3">
+                <div class="col-12 col-md-4">
+                  <div class="border rounded bg-light p-3 h-100">
+                    <i class="fa-solid fa-clock-rotate-left text-primary mb-2"></i>
+                    <div class="fw-semibold">ดูประวัติ</div>
+                    <div class="small text-body-secondary">ย้อนดูออเดอร์ที่ผ่านมา</div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="border rounded bg-light p-3 h-100">
+                    <i class="fa-solid fa-location-dot text-primary mb-2"></i>
+                    <div class="fw-semibold">บันทึกที่อยู่</div>
+                    <div class="small text-body-secondary">สะดวกสำหรับเดลิเวอรี</div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="border rounded bg-light p-3 h-100">
+                    <i class="fa-solid fa-tags text-primary mb-2"></i>
+                    <div class="fw-semibold">รับโปรโมชัน</div>
+                    <div class="small text-body-secondary">ไม่พลาดสิทธิ์พิเศษ</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</template>
